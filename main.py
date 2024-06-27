@@ -1,3 +1,4 @@
+#Projeto Nike
 import numpy as np
 import cv2
 import os
@@ -8,10 +9,10 @@ from sklearn.metrics import accuracy_score, classification_report, confusion_mat
 import matplotlib.pyplot as plt
 
 # Diretórios das imagens
-nike_dir = 'C:/dev/pythonprojects/projetoAI/img/nike_images'
-other_dir = 'C:/dev/pythonprojects/projetoAI/img/others'
-sneakers_dir = 'C:/dev/pythonprojects/projetoAI/img/sneakers'
-not_sneakers_dir = 'C:/dev/pythonprojects/projetoAI/img/not_sneakers'
+nike_dir = '../projetoAI/img/nike_images'
+other_dir = '../projetoAI/img/others'
+sneakers_dir = '../projetoAI/img/sneakers'
+not_sneakers_dir = '../projetoAI/img/not_sneakers'
 
 # Função para carregar e processar imagens
 def load_images_from_folder(folder, label, img_size=(64, 64)):
@@ -109,7 +110,7 @@ def verify_image(image_path, sneakers_model, nike_model, img_size=(64, 64)):
         return "Erro ao processar a imagem.", None
 
 # Exemplo de uso
-image_path = 'C:/dev/pythonprojects/projetoAI/img/tenis-nike6.png'  # Caminho tênis a comparar
+image_path = '../projetoAI/img/tenis-nike6.png'  # Caminho tênis a comparar
 result_text, original_img = verify_image(image_path, sneakers_model, nike_model)
 
 # Visualizar Resultado
